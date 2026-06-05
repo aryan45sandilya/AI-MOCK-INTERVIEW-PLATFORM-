@@ -267,7 +267,7 @@ This project is licensed under the MIT License.
 ---
 
 <div align="center">
-  <strong>Built with ❤️ using Next.js 15 & AI</strong>
+  <strong>Built with ❤️ by Aryan Sandilya using Next.js 15 & AI</strong>
   <br />
   <sub>Star ⭐ this repo if you found it helpful!</sub>
 </div>

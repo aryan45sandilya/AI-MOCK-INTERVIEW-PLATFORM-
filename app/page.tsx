@@ -373,7 +373,7 @@ export default async function LandingPage() {
             <span className="font-black text-lg md:text-xl gradient-text">InterviewAI</span>
           </div>
           <p className="text-xs md:text-sm text-muted-foreground text-center">
-            © 2025 InterviewAI. All rights reserved. Made with ❤️ for job seekers
+            © 2025 InterviewAI. All rights reserved. Built with ❤️ by Aryan Sandilya
           </p>
           <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
