@@ -496,7 +496,7 @@ export function InterviewRoom({ interview, questions }: { interview: Interview; 
             </p>
             <AnswerTimer key={timerKey} durationSeconds={60} active={timerActive} onTimeUp={handleTimeUp} />
             {!aiDone && (
-              <p className="text-xs text-muted-foreground text-center">Click "Hear Question" to start timer</p>
+              <p className="text-xs text-muted-foreground text-center">Click &quot;Hear Question&quot; to start timer</p>
             )}
           </Card>
 
@@ -535,7 +535,7 @@ export function InterviewRoom({ interview, questions }: { interview: Interview; 
               <ul className="text-xs space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-300">•</span>
-                  <span>Click "Hear Question" — AI reads it aloud</span>
+                  <span>Click &quot;Hear Question&quot; — AI reads it aloud</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-300">•</span>
