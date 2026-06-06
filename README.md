@@ -24,37 +24,11 @@
 
 ---
 
-## 🚀 Quick Start
-
 ### Prerequisites
 
 - Node.js 18+ and npm
 - PostgreSQL database (Neon recommended)
 - API Keys: Clerk, Google Gemini, OpenAI
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/aryan45sandilya/AI-MOCK-INTERVIEW-PLATFORM.git
-cd AI-MOCK-INTERVIEW-PLATFORM
-
-# 2. Install dependencies
-npm install
-
-# 3. Set up environment variables
-cp .env.example .env.local
-# Fill in all required API keys and URLs
-
-# 4. Initialize database
-npm run db:push
-
-# 5. Start development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) 🎉
-
 ---
 
 ## 🔧 Environment Variables
