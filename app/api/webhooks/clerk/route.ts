@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
+export const dynamic = "force-dynamic";
+
 interface ClerkEventData {
   id: string;
   email_addresses: Array<{ email_address: string }>;
