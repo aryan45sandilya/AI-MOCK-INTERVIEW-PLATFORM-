@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: process.env.DOCKER_BUILD === "true" ? "standalone" : undefined,
+  output: "standalone",
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
