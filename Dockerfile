@@ -15,6 +15,14 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 
+# Dummy build-time env vars so Clerk/DB don't crash during static page generation
+ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_placeholder
+ENV CLERK_SECRET_KEY=sk_test_placeholder
+ENV DATABASE_URL=postgresql://placeholder:placeholder@placeholder/placeholder
+ENV OPENAI_API_KEY=sk-placeholder
+ENV GOOGLE_GENERATIVE_AI_API_KEY=placeholder
+ENV GROQ_API_KEY=placeholder
+
 RUN npm run build
 
 # Stage 3: Runner
