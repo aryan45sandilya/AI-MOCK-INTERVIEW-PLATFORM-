@@ -1,13 +1,13 @@
 import OpenAI from "openai";
 import { Readable } from "stream";
 
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error("OPENAI_API_KEY is not set");
+// Lazy init - only throws at runtime when actually used
+function getOpenAI() {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error("OPENAI_API_KEY is not set");
+  }
+  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 }
-
-export const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export interface TranscriptionResult {
   text: string;
@@ -19,6 +19,7 @@ export async function transcribeAudio(
   audioBuffer: Buffer,
   filename: string = "audio.webm"
 ): Promise<TranscriptionResult> {
+  const openai = getOpenAI();
   const file = new File([audioBuffer], filename, { type: "audio/webm" });
 
   const transcription = await openai.audio.transcriptions.create({
@@ -50,7 +51,7 @@ export async function evaluateAnswerGPT4(params: {
 }> {
   const { question, answer, questionType, expectedAnswer, role, experience } =
     params;
-
+  const openai = getOpenAI();
   const response = await openai.chat.completions.create({
     model: "gpt-4o",
     messages: [
@@ -99,6 +100,7 @@ export async function generateQuestionsGPT4(params: {
   numberOfQuestions: number;
   resumeText?: string;
 }) {
+  const openai = getOpenAI();
   const {
     role,
     experience,
